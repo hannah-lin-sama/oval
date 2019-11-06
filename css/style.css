@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+*{margin: 0;padding: 0;}
+
+body{
+	background: black;
+}
+
+#box{
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:auto auto;
+	transform-style: preserve-3d;/*定义3D动画*/
+	transform: rotateX(-30deg) rotateY(10deg);/*一开始有个角度*/
+}
+
+#box>img{
+	position: absolute;
+	width: 100%;
+	height: 100%;	
+}
+
+#box>img:nth-child(1){
+	transform:rotateY(36deg) translateZ(650px) ;
+}
+#box>img:nth-child(2){
+	transform:rotateY(72deg) translateZ(650px) ;
+}
+#box>img:nth-child(3){
+	transform:rotateY(108deg) translateZ(650px) ;
+}
+#box>img:nth-child(4){
+	transform:rotateY(144deg) translateZ(650px) ;
+}
+#box>img:nth-child(5){
+	transform:rotateY(180deg) translateZ(650px) ;
+}
+#box>img:nth-child(6){
+	transform:rotateY(216deg) translateZ(650px) ;
+}
+#box>img:nth-child(7){
+	transform:rotateY(252deg) translateZ(650px) ;
+}
+#box>img:nth-child(8){
+	transform:rotateY(288deg) translateZ(650px) ;
+}
+#box>img:nth-child(9){
+	transform:rotateY(324deg) translateZ(650px) ;
+}
+#box>img:nth-child(10){
+	transform:translateZ(650px) ;
+}
+
+@keyframes oval{
+	from{transform: rotateX(-30deg) rotateY(20deg);}
+	25%{transform: scaleZ(1.5) rotateX(-30deg) rotateY(70deg); }
+	50%{transform: scaleZ(2) rotateX(-30deg) rotateY(120deg); }
+	75%{transform: scaleZ(1.5) rotateX(-30deg) rotateY(170deg); }
+	to{transform:scaleZ(0) rotateX(-30deg) rotateY(220deg) ;}
+}
+#box{
+	animation: oval 20s linear infinite;
+}
+#txt{
+	font-size: 30px;
+	color: white;
+}
